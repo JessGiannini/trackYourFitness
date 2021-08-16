@@ -40,11 +40,13 @@ const ExerciseSchema = new Schema({
 
   distance: {
     type: Number,
-    min: 1,
+    default: 0,
     trim: true,
   },
 });
 
+//getting weird error message "can't overwrite model once compiled" https://newbedev.com/cannot-overwrite-model-once-compiled-mongoose
+
 const Exercise = mongoose.model("Exercise", ExerciseSchema);
 
-module.exports = Exercise;
+module.exports = ExerciseSchema;

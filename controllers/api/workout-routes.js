@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const db = require("../../models");
 
+//helpful documentation https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/#mongodb-pipeline-pipe.-addFields
+
 router.get("/", async (req, res) => {
   try {
     res.status(200).json(workouts);
