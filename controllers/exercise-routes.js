@@ -11,6 +11,7 @@ app.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
+    console.log("params", req.params.id);
   } catch {
     res.status(500).json(err);
   }
