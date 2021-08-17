@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Exercise = require("./exercise");
+// const Exercise = require("./exercise");
 
 const WorkoutSchema = new Schema({
   day: {
@@ -8,7 +8,7 @@ const WorkoutSchema = new Schema({
     default: new Date(),
   },
   exercises: {
-    type: [Exercise],
+    type: Array,
   },
   totalDistance: {
     type: Number,

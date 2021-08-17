@@ -47,6 +47,7 @@ const ExerciseSchema = new Schema({
 
 //getting weird error message "can't overwrite model once compiled" https://newbedev.com/cannot-overwrite-model-once-compiled-mongoose
 
-const Exercise = mongoose.model("Exercise", ExerciseSchema);
+const Exercise =
+  mongoose.models["Exercise"] || mongoose.model("Exercise", ExerciseSchema);
 
-module.exports = ExerciseSchema;
+module.exports = Exercise;
